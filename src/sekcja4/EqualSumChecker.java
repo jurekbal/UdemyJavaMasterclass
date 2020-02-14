@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class EqualSumChecker {
 //     Ćwiczenie z kodowania 6
 

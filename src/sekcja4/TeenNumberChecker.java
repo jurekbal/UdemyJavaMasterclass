@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class TeenNumberChecker {
     //Ćwiczenie z kodowania nr 7
 

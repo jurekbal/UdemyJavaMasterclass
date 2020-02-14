@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class SpeedConverter {
 // Ćwiczenie z kodowania 1: Speed Converter
 

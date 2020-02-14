@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class FeetInchesConverter {
     // Challenge z lekcji 57
     // zmodyfikowany (druga metoda miała wywoływać pierwszą)

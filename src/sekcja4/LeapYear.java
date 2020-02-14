@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class LeapYear {
 // Cwiczenie z kodowania 4
 

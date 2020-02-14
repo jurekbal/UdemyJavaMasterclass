@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class DecimalComparator {
     // Cwiczenie z kodowania nr 5
 

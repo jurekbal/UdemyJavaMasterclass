@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class BarkingDog {
 // Cwiczenie z kodowania 3
     

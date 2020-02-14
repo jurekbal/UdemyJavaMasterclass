@@ -1,3 +1,5 @@
+package sekcja4;
+
 public class MegaBytesConverter {
 // Cwiczenie z kodowania 2: MegaBytes Converter
 
