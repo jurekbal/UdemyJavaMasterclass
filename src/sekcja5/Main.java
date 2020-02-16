@@ -4,11 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // cw 23
-        NumberToWords.numberToWords(123);
-        NumberToWords.numberToWords(1010);
-        NumberToWords.numberToWords(1000);
-        NumberToWords.numberToWords(-12);
+        //cw 25
+        System.out.println(LargestPrime.getLargestPrime(315));
+        System.out.println(LargestPrime.getLargestPrime(217));
+        System.out.println(LargestPrime.getLargestPrime(0));
+        System.out.println(LargestPrime.getLargestPrime(45));
+        System.out.println(LargestPrime.getLargestPrime(-1));
+        System.out.println(LargestPrime.getLargestPrime(1));
+        System.out.println(LargestPrime.getLargestPrime(7));
+
+//        // cw 24
+//        System.out.println(FlourPacker.canPack(1,0,4));
+//        System.out.println(FlourPacker.canPack(1,0,5));
+//        System.out.println(FlourPacker.canPack(0,5,4));
+//        System.out.println(FlourPacker.canPack(2,2,11));
+//        System.out.println(FlourPacker.canPack(-3,2,12));
+
+//        // cw 23
+//        NumberToWords.numberToWords(123);
+//        NumberToWords.numberToWords(1010);
+//        NumberToWords.numberToWords(1000);
+//        NumberToWords.numberToWords(-12);
 //        System.out.println(NumberToWords.getDigitCount(0));
 //        System.out.println(NumberToWords.getDigitCount(123));
 //        System.out.println(NumberToWords.getDigitCount(-12));
