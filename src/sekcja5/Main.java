@@ -4,14 +4,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //cw 25
-        System.out.println(LargestPrime.getLargestPrime(315));
-        System.out.println(LargestPrime.getLargestPrime(217));
-        System.out.println(LargestPrime.getLargestPrime(0));
-        System.out.println(LargestPrime.getLargestPrime(45));
-        System.out.println(LargestPrime.getLargestPrime(-1));
-        System.out.println(LargestPrime.getLargestPrime(1));
-        System.out.println(LargestPrime.getLargestPrime(7));
+        // Cw 28
+        System.out.println(PaintJob.getBucketCount(-3.4, 2.1, 1.5, 2));
+        System.out.println(PaintJob.getBucketCount(3.4, 2.1, 1.5, 2));
+        System.out.println(PaintJob.getBucketCount(2.75, 3.25, 2.5, 1));
+        System.out.println(PaintJob.getBucketCount(-3.4, 2.1, 1.5));
+        System.out.println(PaintJob.getBucketCount(3.4, 2.1, 1.5));
+        System.out.println(PaintJob.getBucketCount(7.25, 4.3, 2.35));
+        System.out.println(PaintJob.getBucketCount(3.4, 1.5));
+        System.out.println(PaintJob.getBucketCount(6.26, 2.2));
+        System.out.println(PaintJob.getBucketCount(3.26, 0.75));
+
+//        // Cw 27
+//        InputCalculator.inputThenPrintSumAndAverage();
+
+//        // cw 26
+//        DiagonalStar.printSquareStar(5);
+//        DiagonalStar.printSquareStar(8);
+//        DiagonalStar.printSquareStar(15);
+//        DiagonalStar.printSquareStar(2);
+
+//        //cw 25
+//        System.out.println(LargestPrime.getLargestPrime(315));
+//        System.out.println(LargestPrime.getLargestPrime(217));
+//        System.out.println(LargestPrime.getLargestPrime(0));
+//        System.out.println(LargestPrime.getLargestPrime(45));
+//        System.out.println(LargestPrime.getLargestPrime(-1));
+//        System.out.println(LargestPrime.getLargestPrime(1));
+//        System.out.println(LargestPrime.getLargestPrime(7));
 
 //        // cw 24
 //        System.out.println(FlourPacker.canPack(1,0,4));
