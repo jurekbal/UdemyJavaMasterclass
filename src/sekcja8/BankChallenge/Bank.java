@@ -13,6 +13,14 @@ public class Bank {
         return false;
     }
 
+    public Branch getBranchByIndex(int index) {
+        if (index >= 0 && index < branches.size()) {
+            return branches.get(index);
+        } else {
+            return null;
+        }
+    }
+
     private boolean branchExists(String name) {
         boolean exists = false;
         for (Branch b: branches) {
@@ -26,8 +34,13 @@ public class Bank {
     }
 
     public void printBranchList() {
-        for (Branch b : branches) {
-            System.out.println(b.getName());
+        if (branches.size() > 0) {
+            for (int i = 0; i < branches.size(); i++) {
+                Branch b = branches.get(i);
+                System.out.println((i+1) + ": " + b.getName());
+            }
+        } else {
+            System.out.println("No branches in bank");
         }
     }
 }
