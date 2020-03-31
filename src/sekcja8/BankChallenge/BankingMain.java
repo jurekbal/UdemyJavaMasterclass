@@ -41,12 +41,76 @@ public class BankingMain {
     private static void branchOperations() {
         Branch b = getBranchFromUser();
         if (b != null ) {
-            printBranchMenu(b);
-            String s = getUserInput();
-            //TODO The line where works take place
+            String userInput;
+            do {
+                printBranchMenu(b);
+                userInput = getUserInput();
+                switch (userInput) {
+                    case "0" : {
+                        break;
+                    }
+                    case "1" : {
+                        b.printCustomerList();
+                        pressEnter();
+                        break;
+                    }
+                    case "2" : {
+                        printCustomerTransactions(b);
+                        pressEnter();
+                        break;
+                    }
+                    case "3" : {
+                        addTransaction(b);
+                        pressEnter();
+                        break;
+                    }
+                    case "4" : {
+                        addNewCustomer(b);
+                        pressEnter();
+                        break;
+                    }
+                    default: {
+                        System.out.println("No such option");
+                    }
+                }
+            } while (!userInput.equals("0"));
         } else {
             System.out.println("Error. No such branch.");
             pressEnter();
+        }
+    }
+
+    private static void addTransaction(Branch b) {
+        b.printCustomerList();
+        System.out.print("New transaction - enter customer name:");
+        String customerName = getUserInput();
+        System.out.print("New transaction - enter transaction value:");
+        double value = Double.parseDouble(getUserInput());
+        if( b.addTransaction(customerName, value)) {
+            System.out.println("Transaction succeed");
+        } else {
+            System.out.println("Transaction error");
+        }
+    }
+
+    private static void addNewCustomer(Branch b) {
+        System.out.print("Enter new customer name:");
+        String customerName = getUserInput();
+        System.out.print("Enter initial ballance(use \".\" as decimal separator):");
+        double initialBallance = Double.parseDouble(getUserInput());
+        if(b.addCustomer(customerName, initialBallance)) {
+            System.out.println("Customer " + customerName + " has been successfully added.");
+        } else {
+            System.out.println("Errod. Customer has not been added");
+        }
+    }
+
+    private static void printCustomerTransactions(Branch b) {
+        b.printCustomerList();
+        System.out.print("Enter customer name:");
+        String customerName = getUserInput();
+        if(!b.printCustomerTransactions(customerName)) {
+            System.out.println("No such customer!");
         }
     }
 
@@ -58,12 +122,13 @@ public class BankingMain {
     }
 
     private static void printBranchMenu(Branch b) {
-        System.out.println("Selct option for branch " + b.getName() + ":\n" +
+        System.out.print("Selct option for branch " + b.getName() + ":\n" +
                 "0 - back\n" +
                 "1 - list all customers in branch\n" +
-                "2 - list transactions od customer\n" +
+                "2 - list transactions of customer\n" +
                 "3 - add transaction\n" +
-                "4 - add customer");
+                "4 - add new customer\n" +
+                "Choose option:");
 
     }
 
@@ -77,7 +142,7 @@ public class BankingMain {
     }
 
     private static void printMenu() {
-        System.out.println(
+        System.out.print(
                 "Select option:\n" +
                         "0 - quit program\n" +
                         "1 - List branches\n" +

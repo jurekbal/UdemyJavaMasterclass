@@ -6,8 +6,24 @@ public class Bank {
     private ArrayList<Branch> branches = new ArrayList<>();
 
     public boolean addBranch(String name) {
-        if (!branchExists(name)) {
+        if (branchExists(name) == null) {
             branches.add(new Branch(name));
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addCustomer(String branchName, String customerName, double initialBallance) {
+        Branch b = branchExists(branchName);
+        if (b != null) {
+            return b.addCustomer(customerName, initialBallance);
+        }
+        return false;
+    }
+    public boolean addTransaction(String branchName, String customerName, double value) {
+        Branch b = branchExists(branchName);
+        if (b != null) {
+            b.addTransaction(customerName, value);
             return true;
         }
         return false;
@@ -21,16 +37,14 @@ public class Bank {
         }
     }
 
-    private boolean branchExists(String name) {
+    private Branch branchExists(String name) {
         boolean exists = false;
         for (Branch b: branches) {
             if ( b.getName().toLowerCase().equals(name.toLowerCase()) ) {
-                exists = true;
-                //System.out.println("Branch name exists in database.");
-                break;
+                return b;
             }
         }
-        return exists;
+        return null;
     }
 
     public void printBranchList() {

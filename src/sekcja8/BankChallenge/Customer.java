@@ -9,16 +9,16 @@ public class Customer {
 
     public Customer(String name, double initialBalance) {
         this.name = name;
-        this.transactions.add(Double.valueOf(initialBalance));
+        this.transactions.add(initialBalance);
     }
 
     public Customer(String name) {
         this.name = name;
-        this.transactions.add(Double.valueOf(0.0));
+        this.transactions.add(0.0);
     }
 
     public void addTransaction (double value) {
-        transactions.add(Double.valueOf(value));
+        transactions.add(value);
     }
 
     public void printTransactions() {

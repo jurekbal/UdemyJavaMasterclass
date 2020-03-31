@@ -11,7 +11,7 @@ public class Branch {
     }
 
     public boolean addCustomer(String name, double initialBallance){
-        if (!customerExists(name)) {
+        if (customerExists(name) == null) {
             if (initialBallance >= 0.0) {
                 customers.add(new Customer(name, initialBallance));
                 return true;
@@ -19,38 +19,46 @@ public class Branch {
             System.out.println("Initial ballance have to be 0 or greater.");
             return false;
         } else {
+            System.out.println("Customer name exists in database");
             return false;
         }
     }
 
-    public void doTransaction(Customer c, double value) {
-        if (customerExists(c.getName())) {
+    public boolean addTransaction(String customerName, double value) {
+        Customer c = customerExists(customerName);
+        if (c != null) {
             c.addTransaction(value);
+            return true;
         } else {
             System.out.println("Customer name don't exists.");
+            return false;
         }
     }
 
-    private boolean customerExists(String name) {
+    private Customer customerExists(String name) {
         boolean exists = false;
         for (Customer c: customers) {
-            if ( c.getName().toLowerCase().equals(name.toLowerCase()) ) {
-                exists = true;
-                //System.out.println("Customer name exists in database.");
-                break;
+            if (c.getName().toLowerCase().equals(name.toLowerCase()) ) {
+                return c;
             }
         }
-        return exists;
+        return null;
     }
 
-    public void printCustomerList(boolean withTransactions) {
-        for (Customer c: customers) {
-            System.out.println(c.getName());
-            if (withTransactions) {
-                c.printTransactions();
-                System.out.println("------------");
-            }
+    public void printCustomerList() {
+        for (int i = 0; i < customers.size(); i++) {
+            Customer c = customers.get(i);
+            System.out.println((i+1) + ": " + c.getName());
         }
+    }
+
+    public boolean printCustomerTransactions(String customerName) {
+        Customer c = customerExists(customerName);
+        if (c != null) {
+            c.printTransactions();
+            return true;
+        }
+        return false;
     }
 
     public String getName() {
