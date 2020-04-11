@@ -1,6 +1,5 @@
-package sekcja8.BankChallenge;
+package sekcja8.bankChallenge;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 // Challenge 112.

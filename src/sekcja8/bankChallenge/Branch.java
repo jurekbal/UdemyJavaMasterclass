@@ -1,4 +1,4 @@
-package sekcja8.BankChallenge;
+package sekcja8.bankChallenge;
 
 import java.util.ArrayList;
 

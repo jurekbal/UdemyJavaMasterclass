@@ -1,4 +1,4 @@
-package sekcja8.ArrayListChallenge;
+package sekcja8.arrayListChallenge;
 
 import java.util.ArrayList;
 import java.util.Scanner;

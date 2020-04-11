@@ -1,7 +1,6 @@
-package sekcja8.BankChallenge;
+package sekcja8.bankChallenge;
 
 import java.util.ArrayList;
-import java.util.function.DoubleToIntFunction;
 
 public class Customer {
     private String name;

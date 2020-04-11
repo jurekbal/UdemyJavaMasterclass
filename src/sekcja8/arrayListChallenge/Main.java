@@ -1,4 +1,4 @@
-package sekcja8.ArrayListChallenge;
+package sekcja8.arrayListChallenge;
 
 public class Main {
     public static void main(String[] args) {
