@@ -1,4 +1,4 @@
-package sekcja8.abstractClasses;
+package sekcja9.abstractClasses;
 
 public class SearchTree implements NodeList {
 

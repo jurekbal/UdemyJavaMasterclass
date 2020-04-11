@@ -1,4 +1,4 @@
-package sekcja8.innerClassChallenge;
+package sekcja9.innerClassChallenge;
 
 public class Song {
     private String title;

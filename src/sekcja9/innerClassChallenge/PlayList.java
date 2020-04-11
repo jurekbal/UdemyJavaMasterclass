@@ -1,4 +1,4 @@
-package sekcja8.innerClassChallenge;
+package sekcja9.innerClassChallenge;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
