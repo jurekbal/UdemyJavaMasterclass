@@ -1,7 +1,11 @@
 package sekcja11.packages;
 
 
+/*
+com.series.Series.* is a separate Project from witch comes the *.jar artifact;
+ */
 import static com.series.Series.*;
+
 
 public class Main {
     public static void main(String[] args) {

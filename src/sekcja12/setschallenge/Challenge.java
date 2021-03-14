@@ -1,9 +1,10 @@
-package com.timbuchalka;
+package sekcja12.setschallenge;
 
 /**
  * Created by dev on 17/01/2016.
  */
 public class Challenge {
+
     /**
      * When overriding the equals() method in the HeavenlyBody class, we
      * were careful to make sure that it would not return true if a HeavenlyBody

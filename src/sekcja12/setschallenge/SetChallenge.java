@@ -1,4 +1,4 @@
-package com.timbuchalka;
+package sekcja12.setschallenge;
 
 /**
  * Created by dev on 5/02/2016.
@@ -6,6 +6,10 @@ package com.timbuchalka;
 public class SetChallenge {
     public static void main(String[] args) {
         /*
+
+            **This is challenge for lecture 168 (JB)
+
+
         Modify the previous HeavenlyBody example so that the HeavenlyBody
         class also has a "bodyType" field. This field will store the
         type of HeavenlyBody (such as STAR, PLANET, MOON, etc).

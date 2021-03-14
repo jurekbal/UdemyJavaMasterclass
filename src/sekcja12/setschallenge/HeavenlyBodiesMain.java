@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class Main {
+public class HeavenlyBodiesMain {
     private static Map<HeavenlyBody.Key, HeavenlyBody> solarSystem = new HashMap<>();
     private static Set<HeavenlyBody> planets = new HashSet<>();
 
@@ -95,6 +95,7 @@ public class Main {
             System.out.println("\t" + moon.getKey());
         }
 
+//        HeavenlyBody pluto = new DwarfPlanet("Pluto", 842);
         HeavenlyBody pluto = new DwarfPlanet("Pluto", 842);
         planets.add(pluto);
 
@@ -108,6 +109,16 @@ public class Main {
         HeavenlyBody earth2 = new Planet("Earth", 365);
         System.out.println(earth1.equals(earth2));
         System.out.println(earth2.equals(earth1));
+
+        solarSystem.put(pluto.getKey(), pluto);
+        System.out.println(solarSystem.get(HeavenlyBody.makeKey("Pluto", HeavenlyBody.BodyTypes.PLANET)));
+        System.out.println(solarSystem.get(HeavenlyBody.makeKey("Pluto", HeavenlyBody.BodyTypes.DWARF_PLANET)));
+
+        System.out.println();
+        System.out.println("The solar system contains:");
+        for(HeavenlyBody heavenlyBody : solarSystem.values()){
+            System.out.println(heavenlyBody);
+        }
 
 
     }

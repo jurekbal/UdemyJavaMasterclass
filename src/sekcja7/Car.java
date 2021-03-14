@@ -1,7 +1,5 @@
 package sekcja7;
 
-import java.util.SortedMap;
-
 // Polymorphism challenge - lesson 95
 public class Car {
     private boolean hasEngine;

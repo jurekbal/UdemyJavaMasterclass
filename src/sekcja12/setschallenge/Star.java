@@ -1,4 +1,7 @@
 package sekcja12.setschallenge;
 
-public class Star {
+public class Star extends HeavenlyBody {
+    public Star(String name, double orbitalPeriod) {
+        super(name, orbitalPeriod, BodyTypes.STAR);
+    }
 }

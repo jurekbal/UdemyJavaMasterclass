@@ -1,4 +1,4 @@
-package com.timbuchalka;
+package sekcja12.setschallenge;
 
 import java.util.Arrays;
 import java.util.HashSet;

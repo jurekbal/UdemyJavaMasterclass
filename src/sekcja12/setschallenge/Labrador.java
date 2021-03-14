@@ -1,4 +1,4 @@
-package com.timbuchalka;
+package sekcja12.setschallenge;
 
 /**
  * Created by dev on 17/01/2016.

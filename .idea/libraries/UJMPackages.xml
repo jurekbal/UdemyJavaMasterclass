@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="UJMPackages">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../UJMPackages/out/artifacts/UJMPackages_jar/UJMPackages.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Udemy Java Masterclass/UJMPackages/out/artifacts/UJMPackages_jar/UJMPackages.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
